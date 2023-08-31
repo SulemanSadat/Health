@@ -1,0 +1,94 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #f2f2f2;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  ::-webkit-scrollbar{
+    width: 10px;
+  }
+  ::-webkit-scrollbar-thumb{
+    background-color: #6ea5ff;
+    border-radius: 10px;
+    
+  }
+  
+  .login-form {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 40px;
+    box-shadow: 0 0 20px rgba(208, 208, 208, 0.678);
+  }
+  
+  h2 {
+    text-align: center;
+  }
+  
+  input[type=text], input[type=password] {
+    width: 90%;
+    padding: 12px;
+    border-radius: 10px;
+    margin: 10px 0;
+    border: 0.5px solid #6d6d6d;
+  }
+  
+  button[type=submit] {
+      background-color: #ffffff;
+      color: #000000;
+      padding:10px;
+      width: 50%;
+      border: 1px solid;
+      cursor:pointer; 
+      font-size:18px; 
+      margin-top:10px;
+      border-radius: 10px;
+      
+  }
+
+  button[type=submit]:active{
+    background-color: #e7e7e7;
+   
+  }
+  @media screen and (min-width: 1024px) {
+    button[type=submit]:hover{
+    background-color: #000000;
+    color: #FFF;
+  }
+}
+
+  
+  @media screen and (min-width: 768px) {
+    .container {
+      padding: 0 20px;
+    }
+  }
+  
+  /* Green Animations */
+  button[type=submit] {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  
+  
+  button[type=submit]:hover::after {
+      animation-name: expand;
+      animation-duration: .5s;
+      animation-timing-function: ease-out;
+      animation-fill-mode:both; 
+  }
+  
+  @keyframes expand {
+      from {transform-origin:right bottom; opacity:.5;}
+      to {transform-origin:left top; opacity:.8;}
+  }
